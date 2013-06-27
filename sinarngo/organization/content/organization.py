@@ -47,11 +47,11 @@ class IOrganization(form.Schema, IImageScaleTraversable):
     website = schema.TextLine(title=u'Website',
                               description=u'Website url.',)
 
-    gpluspage = schema.TextLine(title=u'Google+ Page',)
-                                description=u'Google+ Page url'),
+    gpluspage = schema.TextLine(title=u'Google+ Page',
+                                description=u'Google+ Page url')
  
-    fbpage = schema.TextLine(title=u'FaceBook Page',)
-                                description=u'FaceBook Page url'),
+    fbpage = schema.TextLine(title=u'FaceBook Page',
+                                description=u'FaceBook Page url')
 
-    twitter = schema.TextLine(title=u'Twitter',)
-                                description=u'Twitter account url'),
+    twitter = schema.TextLine(title=u'Twitter',
+                                description=u'Twitter account url')
