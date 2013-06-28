@@ -33,6 +33,7 @@ setup(name='sinarngo.organization',
           'collective.dexteritytextindexer',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
+          'ploneun.vocabularies',
           # -*- Extra requirements: -*-
       ],
       extras_require={
