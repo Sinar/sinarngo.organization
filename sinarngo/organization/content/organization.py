@@ -17,6 +17,8 @@ from plone.app.textfield import RichText
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
+from collective import dexteritytextindexer
+
 from sinarngo.organization import MessageFactory as _
 
 # Interface class; used to define content-type schema.
@@ -26,14 +28,17 @@ class IOrganization(form.Schema, IImageScaleTraversable):
     Organizations
     """
 
+    dexteritytextindexer.searchable('title')
     title = schema.TextLine(title=u'Name', 
                          description=u'Name of organization.')
 
-    description = schema.TextLine(title=u'Description',
+    dexteritytextindexer.searchable('title')
+    description = schema.Text(title=u'Description',
                                   description=u'Brief description '
                                   'of organization.'
                                   )
 
+    dexteritytextindexer.searchable('details')
     details = RichText(
                 title=_(u"Details"),
                 required=False,
@@ -45,13 +50,19 @@ class IOrganization(form.Schema, IImageScaleTraversable):
     )
 
     website = schema.TextLine(title=u'Website',
-                              description=u'Website url.',)
+            description=u'Enter url eg. http://sinarproject.org',
+                              required=False)
 
     gpluspage = schema.TextLine(title=u'Google+ Page',
-                                description=u'Google+ Page url')
+                                description=u'Enter url eg. https://plus.google.com/101396658148522528050 ',
+                                required=False)
  
     fbpage = schema.TextLine(title=u'FaceBook Page',
-                                description=u'FaceBook Page url')
+            description=u'Enter url eg. '
+            'https://www.facebook.com/organization',
+                                required=False)
 
     twitter = schema.TextLine(title=u'Twitter',
-                                description=u'Twitter account url')
+            description=u'Enter url eg. '
+            'https://twitter.com/sinarproject.org',
+                                required=False)

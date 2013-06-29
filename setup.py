@@ -34,6 +34,7 @@ setup(name='sinarngo.organization',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
           'ploneun.vocabularies',
+          'collective.z3cform.widgets',
           # -*- Extra requirements: -*-
       ],
       extras_require={
