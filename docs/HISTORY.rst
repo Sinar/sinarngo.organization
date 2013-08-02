@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4 (unreleased)
+0.4 (2013-08-02)
 ----------------
 
 - Add Street Address
