@@ -4,7 +4,11 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add Street Address
+- Add custom view
+
+Funded by: 
+IDRC <www.idrc.ca> for e-DirAP <digitalreview.asia>
 
 
 0.3 (2013-07-01)

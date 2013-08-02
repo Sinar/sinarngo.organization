@@ -49,6 +49,10 @@ class IOrganization(form.Schema, IImageScaleTraversable):
         vocabulary = "ploneun.vocabularies.organizations.types"
     )
 
+    email = schema.TextLine(title=u'Email address')
+
+    address = schema.Text(title=u'Street Address')
+
     website = schema.TextLine(title=u'Website',
             description=u'Enter url eg. http://sinarproject.org',
                               required=False)
